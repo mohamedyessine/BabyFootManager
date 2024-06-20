@@ -1,0 +1,26 @@
+'use strict'
+const ip = require('ip').address()
+
+const {
+  BF_PGUSER,
+  BF_PGHOST,
+  BF_PGDATABASE,
+  BF_PGPASSWORD,
+  BF_PGPORT,
+  BF_HTTP_PORT,
+  BF_WEBSOCKET_PORT,
+  BF_EXTERNAL_IP,
+  BF_ENV
+} = process.env
+
+module.exports = {
+  PGUSER: BF_PGUSER ? BF_PGUSER : 'postgres',
+  PGHOST: BF_PGHOST ? BF_PGHOST : 'localhost',
+  PGDATABASE: BF_PGDATABASE ? BF_PGDATABASE : 'babyfoot',
+  PGPASSWORD: BF_PGPASSWORD ? BF_PGPASSWORD : 'Yessine07+',
+  PGPORT: BF_PGPORT ? BF_PGPORT : 5432,
+  HTTP_PORT: BF_HTTP_PORT ? BF_HTTP_PORT : 4200,
+  WEBSOCKET_PORT: BF_WEBSOCKET_PORT ? BF_WEBSOCKET_PORT : 8080,
+  EXTERNAL_IP: BF_EXTERNAL_IP ? BF_EXTERNAL_IP : ip,
+  ENV: BF_ENV ? BF_ENV : 'Development'
+}

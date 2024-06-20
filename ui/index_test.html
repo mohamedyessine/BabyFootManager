@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BF Manager</title>
+  <meta name="description" content="BabyFoot Manager">
+  <link rel="stylesheet" href="index.css?v=1.0">
+  <link rel="stylesheet" href="./features/board/add.css?v=1.0"/>
+  <link rel="stylesheet" href="./features/board/list.css?v=1.0"/>
+  <link rel="stylesheet" href="./features/search/search.css?v=1.0"/>
+  <link rel="stylesheet" href="./features/tchat/tchat.css?v=1.0"/>
+  <link rel="stylesheet" href="./features/menu/menu.css?v=1.0"/>
+  <link rel="stylesheet" href="mobile.css?v=1.0">
+  <link rel="icon" href="./assets/logo.png">
+</head>
+<body>
+  <div id="header">
+    <h1>BabyFoot Manager</h1>
+    <div id="menu" tabindex="0">
+      <a>&#8801;</a>
+      <ul>
+        <li><a>Parties</a></li>
+        <li><a>Tchat</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="flexContainer">
+    <div id="gameBoard">
+      <form id="newGame" onsubmit="event.preventDefault()">
+        <div class="playerSearch">
+          <input type="text" placeholder="Joueur 1" required>
+        </div>
+        <span>vs</span>
+        <div class="playerSearch">
+          <input type="text" placeholder="Joueur 2" required>
+        </div>
+        <button type='submit'>Nouvelle partie</button>
+      </form>
+      <div id="gameList">
+        <h2>Les Parties en cours: <span></span></h2>
+        <ul></ul>
+      </div>
+    </div>
+    <div id="chat">
+      <div id="chatHeader">
+        <h2>Tchat</h2>
+        <span></span>
+      </div>
+      <div class="playerSearch">
+        <input type="text" placeholder="Nickname ..."></input>
+      </div>
+      <ul>
+      </ul>
+      <textarea id="messageBox" type="text" placeholder="Message ..."></textarea>
+    </div>
+    <div id="error">
+      Une erreur de connexion ou de serveur s'est produite. Veuillez contacter l'administrateur.
+    </div>
+  </div>
+  <script src="config.js"></script>
+  <script src="./services/error.js?v=1.0"></script>
+  <script src="./services/websocket_client.js?v=1.0"></script>
+  <script src="./services/http_client.js?v=1.0"></script>
+  <script src="./features/search/search.js?v=1.0"></script>
+  <script src="./features/board/add.js?v=1.0"></script>
+  <script src="./features/board/list.js?v=1.0"></script>
+  <script src="./features/tchat/tchat.js?v=1.0"></script>
+  <script src="./features/menu/menu.js?v=1.0"></script>
+  <script src="app.js?v=1.0"></script>
+</body>
+</html>

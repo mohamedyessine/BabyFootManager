@@ -1,0 +1,31 @@
+#newGame div {
+  display: inline-block;
+  width: calc(50% - 105px);
+  position: relative;
+  z-index: 3;
+}
+
+#newGame div:first-of-type {
+  margin-right: 6px;
+  margin-left: 10px;
+}
+
+#newGame div:last-of-type {
+  margin-left: 6px;
+}
+
+#newGame button {
+  margin-left: 10px;
+  width: 130px;
+  padding: 4px 0px;
+  position: relative;
+  font-size: 16px;
+  top: -1px;
+  border-radius: 3px;
+  background: #227ee0;
+}
+
+#newGame span {
+  display: inline-block;
+  width: 20px;
+}

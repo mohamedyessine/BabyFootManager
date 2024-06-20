@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  web:
+    image: node:16.17.0
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      BF_PGUSER: postgres
+      BF_PGHOST: db
+      BF_PGDATABASE: babyfoot
+      BF_PGPASSWORD: Yessine07+
+      BF_PGPORT: 5432
+      BF_HTTP_PORT: 4200
+      BF_WEBSOCKET_PORT: 8080
+      BF_EXTERNAL_IP: ${EXTERNAL_IP:-127.0.0.1}
+      BF_ENV: Development
+    ports:
+      - "4200:4200"
+      - "8080:8080"
+    depends_on:
+      - db
+    command: >
+      sh -c "npm install && npm start"
+    restart: always
+
+  db:
+    image: postgres:14.5
+    environment:
+      POSTGRES_DB: babyfoot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Yessine07+
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    restart: always
+
+

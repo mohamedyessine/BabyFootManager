@@ -1,0 +1,88 @@
+#chat h2 {
+  border: thin #5884fd solid;
+  color: #5884fd;
+}
+
+#chat .playerSearch input {
+  margin: 30px 20px 0px 10px;
+  width: calc(100% - 20px);
+}
+
+#chat .playerSearch:after {
+  top: 35px;
+}
+
+#chat .playerSearch ul {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#chat > ul {
+  height: 100%;
+  margin: 9px 10px 0px 10px;
+  border: thin rgb(126, 164, 236) solid;
+  padding-top: 5px;
+  background: rgb(240, 248, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+  flex: auto;
+  overflow-y: auto;
+  font-size: 15px;
+}
+
+#chat li span:first-of-type {
+  background-size: 210px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: 8px;
+}
+
+#chat li span:nth-of-type(2) {
+  color: blue;
+}
+
+#chat li span:last-of-type {
+  color: blue;
+}
+
+#chat > ul li {
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+
+#chat li.unknownPlayer span {
+  color: gray;
+}
+
+#chatHeader {
+  width: 100%;
+  position: relative;
+}
+
+#chatHeader span {
+  background-image: url("../../assets/icons.jpg");
+  width: 30px;
+  height: 30px;
+  float: right;
+  position: absolute;
+  display: none;
+  top: -16px;
+  right: 10px;
+  border: thin gray solid;
+}
+
+#messageBox {
+  margin: -1px 10px 10px 10px;
+  border: thin lightblue solid;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+}
